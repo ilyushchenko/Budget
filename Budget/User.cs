@@ -8,7 +8,7 @@ namespace Budget
 {
     class User
     {
-        private string m_UserName = "admin";
+        private string m_UserName = "345";
         private string m_Password = "admin";
         
         public string UserName
