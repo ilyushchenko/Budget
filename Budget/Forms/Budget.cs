@@ -15,9 +15,9 @@ namespace Budget
         public Budget(Articles articles, Categories categories)
         {
             InitializeComponent();
-            AddToCtgList();
             m_art = articles;
             m_categories = categories;
+            AddToCtgList();
         }
 
         Categories m_categories;

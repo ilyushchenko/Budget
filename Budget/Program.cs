@@ -17,7 +17,8 @@ namespace Budget
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Fabric fabric = new Fabric();
-            Application.Run(new Budget(fabric.GetArticles(), fabric.GetCategories()));
+            Categories cat = fabric.GetCategories();
+            Application.Run(new Budget(fabric.GetArticles(), cat));
         }
     }
 }
