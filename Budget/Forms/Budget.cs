@@ -133,7 +133,7 @@ namespace Budget
 
         private void AddArtToGrid(Article article)
         {
-            dataGridView.Rows.Add(article.Date, article.Category, article.NameArt, article.PriceArt, article.AmountArt, article.CommentAtr);
+            dataGridView.Rows.Add(article.Date, article.Category, article.NameArt, article.PriceArt, article.AmountArt, article.CommentAtr, (article.IsIncome) ? "Доход" : "Расход");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
