@@ -117,9 +117,18 @@ namespace Budget
         private void Budget_Load(object sender, EventArgs e)
         {
             m_art.LoadArticles("articles.txt");
+            LoadGW();
+        }
+
+        private void LoadGW()
+        {
             m_art.GetAtrToDataGW(AddArtToGrid);
-            lIncome.Text = m_art.GetIncome(true).ToString();
-            lExpence.Text = m_art.GetIncome(false).ToString();
+            decimal expence = m_art.GetIncome(false);
+            decimal income = m_art.GetIncome(true);
+            decimal saldo = income - expence;
+            lIncome.Text = income.ToString();
+            lExpence.Text = expence.ToString();
+            lSaldo.Text = saldo.ToString();
         }
 
         private void AddArtToGrid(Article article)
@@ -130,25 +139,40 @@ namespace Budget
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             dataGridView.Rows.Clear();
-            if (rBDay.Checked)
-            {
-                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value);
-            }
-            if (raBWeek.Checked)
-            {
-                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value.AddDays(7));
-            }
-            if (rBMonth.Checked)
-            {
-                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value.AddMonths(1));
-            }
-            if (rbPeriod.Checked)
-            {
-                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerTo.Value);
-            }
             if (rBAll.Checked)
             {
-                m_art.GetAtrToDataGW(AddArtToGrid);
+                LoadGW();
+            }
+            else
+            {
+                DateTime dateFrom, dateTo;
+                if (rBDay.Checked)
+                {
+                    dateFrom = dateTimePickerForm.Value;
+                    dateTo = dateTimePickerForm.Value;
+                }
+                else if (raBWeek.Checked)
+                {
+                    dateFrom = dateTimePickerForm.Value;
+                    dateTo = dateTimePickerForm.Value.AddDays(7);
+                }
+                else if (rBMonth.Checked)
+                {
+                    dateFrom = dateTimePickerForm.Value;
+                    dateTo = dateTimePickerForm.Value.AddMonths(1);
+                }
+                else /*(rbPeriod.Checked)*/
+                {
+                    dateFrom = dateTimePickerForm.Value;
+                    dateTo = dateTimePickerTo.Value;
+                }
+                m_art.GetAtrToDataGW(AddArtToGrid, dateFrom, dateTo);
+                decimal expence = m_art.GetIncome(false, dateFrom, dateTo);
+                decimal income = m_art.GetIncome(true, dateFrom, dateTo);
+                decimal saldo = income - expence;
+                lIncome.Text = income.ToString();
+                lExpence.Text = expence.ToString();
+                lSaldo.Text = saldo.ToString();
             }
         }
     }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Budget));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCreateNewFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,13 +67,6 @@
             this.labExpense = new System.Windows.Forms.Label();
             this.labIncome = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gBCategory = new System.Windows.Forms.GroupBox();
             this.lstbx_Categories = new System.Windows.Forms.ListBox();
             this.btn_AddNewArt = new System.Windows.Forms.Button();
@@ -85,6 +79,13 @@
             this.tb_NameCtg = new System.Windows.Forms.TextBox();
             this.lbl_help = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
@@ -427,46 +428,6 @@
             this.dataGridView.Size = new System.Drawing.Size(618, 344);
             this.dataGridView.TabIndex = 5;
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Дата";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Категория";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 75;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Название";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Стоимость";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 75;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Количество";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 75;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Комментарий";
-            this.Column5.Name = "Column5";
-            // 
-            // Isincome
-            // 
-            this.Isincome.HeaderText = "Доход/Расход";
-            this.Isincome.Name = "Isincome";
-            // 
             // gBCategory
             // 
             this.gBCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -597,6 +558,49 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // Column6
+            // 
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column6.HeaderText = "Дата";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Категория";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 75;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Название";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Стоимость";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Количество";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 75;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Комментарий";
+            this.Column5.Name = "Column5";
+            // 
+            // Isincome
+            // 
+            this.Isincome.HeaderText = "Доход/Расход";
+            this.Isincome.Name = "Isincome";
+            // 
             // Budget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,14 +684,7 @@
         private System.Windows.Forms.Button btnAddNewCtg;
         private System.Windows.Forms.TextBox tb_NameCtg;
         private System.Windows.Forms.Label lbl_help;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btn_CancelAddNewCtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
         private System.Windows.Forms.DateTimePicker dateTimePickerForm;
         private System.Windows.Forms.DateTimePicker dateTimePickerTo;
         private System.Windows.Forms.Label label2;
@@ -695,6 +692,13 @@
         private System.Windows.Forms.RadioButton rbPeriod;
         private System.Windows.Forms.RadioButton rBAll;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
     }
 }
 
