@@ -84,6 +84,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rBAll = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
@@ -233,6 +234,7 @@
             // gBRevise
             // 
             this.gBRevise.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gBRevise.Controls.Add(this.rBAll);
             this.gBRevise.Controls.Add(this.radioButton1);
             this.gBRevise.Controls.Add(this.dateTimePicker2);
             this.gBRevise.Controls.Add(this.dateTimePicker1);
@@ -241,7 +243,7 @@
             this.gBRevise.Controls.Add(this.rBMonth);
             this.gBRevise.Controls.Add(this.raBWeek);
             this.gBRevise.Controls.Add(this.rBDay);
-            this.gBRevise.Location = new System.Drawing.Point(805, 27);
+            this.gBRevise.Location = new System.Drawing.Point(805, 16);
             this.gBRevise.Name = "gBRevise";
             this.gBRevise.Size = new System.Drawing.Size(164, 177);
             this.gBRevise.TabIndex = 2;
@@ -251,7 +253,7 @@
             // rBMonth
             // 
             this.rBMonth.AutoSize = true;
-            this.rBMonth.Location = new System.Drawing.Point(12, 70);
+            this.rBMonth.Location = new System.Drawing.Point(12, 59);
             this.rBMonth.Name = "rBMonth";
             this.rBMonth.Size = new System.Drawing.Size(73, 17);
             this.rBMonth.TabIndex = 5;
@@ -262,7 +264,7 @@
             // raBWeek
             // 
             this.raBWeek.AutoSize = true;
-            this.raBWeek.Location = new System.Drawing.Point(12, 45);
+            this.raBWeek.Location = new System.Drawing.Point(12, 38);
             this.raBWeek.Name = "raBWeek";
             this.raBWeek.Size = new System.Drawing.Size(79, 17);
             this.raBWeek.TabIndex = 4;
@@ -273,7 +275,7 @@
             // rBDay
             // 
             this.rBDay.AutoSize = true;
-            this.rBDay.Location = new System.Drawing.Point(12, 21);
+            this.rBDay.Location = new System.Drawing.Point(12, 17);
             this.rBDay.Name = "rBDay";
             this.rBDay.Size = new System.Drawing.Size(65, 17);
             this.rBDay.TabIndex = 3;
@@ -290,7 +292,7 @@
             this.gBStatistics.Controls.Add(this.labSaldo);
             this.gBStatistics.Controls.Add(this.labExpense);
             this.gBStatistics.Controls.Add(this.labIncome);
-            this.gBStatistics.Location = new System.Drawing.Point(7, 293);
+            this.gBStatistics.Location = new System.Drawing.Point(7, 277);
             this.gBStatistics.Name = "gBStatistics";
             this.gBStatistics.Size = new System.Drawing.Size(164, 83);
             this.gBStatistics.TabIndex = 3;
@@ -354,7 +356,7 @@
             // Calendar
             // 
             this.Calendar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Calendar.Location = new System.Drawing.Point(805, 209);
+            this.Calendar.Location = new System.Drawing.Point(805, 198);
             this.Calendar.Name = "Calendar";
             this.Calendar.TabIndex = 4;
             // 
@@ -371,9 +373,9 @@
             this.Column4,
             this.Column5,
             this.Isincome});
-            this.dataGridView.Location = new System.Drawing.Point(181, 27);
+            this.dataGridView.Location = new System.Drawing.Point(181, 16);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(618, 349);
+            this.dataGridView.Size = new System.Drawing.Size(618, 344);
             this.dataGridView.TabIndex = 5;
             // 
             // Column6
@@ -424,7 +426,7 @@
             this.gBCategory.Controls.Add(this.picBoxDel);
             this.gBCategory.Controls.Add(this.picBoxEdit);
             this.gBCategory.Controls.Add(this.picBoxAdd);
-            this.gBCategory.Location = new System.Drawing.Point(7, 27);
+            this.gBCategory.Location = new System.Drawing.Point(7, 16);
             this.gBCategory.Name = "gBCategory";
             this.gBCategory.Size = new System.Drawing.Size(168, 260);
             this.gBCategory.TabIndex = 6;
@@ -494,7 +496,7 @@
             this.pnl_AddEditCtg.Controls.Add(this.btnAddNewCtg);
             this.pnl_AddEditCtg.Controls.Add(this.tb_NameCtg);
             this.pnl_AddEditCtg.Controls.Add(this.lbl_help);
-            this.pnl_AddEditCtg.Location = new System.Drawing.Point(465, 147);
+            this.pnl_AddEditCtg.Location = new System.Drawing.Point(465, 136);
             this.pnl_AddEditCtg.Name = "pnl_AddEditCtg";
             this.pnl_AddEditCtg.Size = new System.Drawing.Size(199, 117);
             this.pnl_AddEditCtg.TabIndex = 9;
@@ -548,7 +550,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 121);
+            this.label2.Location = new System.Drawing.Point(9, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 7;
@@ -565,7 +567,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(28, 118);
+            this.dateTimePicker2.Location = new System.Drawing.Point(28, 123);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(123, 20);
             this.dateTimePicker2.TabIndex = 9;
@@ -573,7 +575,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(11, 94);
+            this.radioButton1.Location = new System.Drawing.Point(12, 101);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(103, 17);
             this.radioButton1.TabIndex = 10;
@@ -581,12 +583,23 @@
             this.radioButton1.Text = "За промежуток";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // rBAll
+            // 
+            this.rBAll.AutoSize = true;
+            this.rBAll.Location = new System.Drawing.Point(12, 80);
+            this.rBAll.Name = "rBAll";
+            this.rBAll.Size = new System.Drawing.Size(94, 17);
+            this.rBAll.TabIndex = 11;
+            this.rBAll.TabStop = true;
+            this.rBAll.Text = "За всё время";
+            this.rBAll.UseVisualStyleBackColor = true;
+            // 
             // Budget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1120, 385);
+            this.ClientSize = new System.Drawing.Size(1120, 363);
             this.Controls.Add(this.pnl_AddEditCtg);
             this.Controls.Add(this.gBCategory);
             this.Controls.Add(this.dataGridView);
@@ -678,6 +691,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rBAll;
     }
 }
 
