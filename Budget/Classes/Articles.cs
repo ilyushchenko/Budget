@@ -64,6 +64,24 @@ namespace Budget
             m_articles.Add(article);
         }
 
+        public void RemoveArticle(Article aricleToRemove)
+        {
+            foreach (Article article in m_articles)
+            {
+                if (article.Date.Date == aricleToRemove.Date &&
+                    article.Category == aricleToRemove.Category &&
+                    article.NameArt == aricleToRemove.NameArt &&
+                    article.CommentAtr == aricleToRemove.CommentAtr &&
+                    article.PriceArt == aricleToRemove.PriceArt &&
+                    article.AmountArt == aricleToRemove.AmountArt &&
+                    article.IsIncome == aricleToRemove.IsIncome)
+                {
+                    m_articles.Remove(article);
+                    break;
+                }
+            }
+        }
+
         public decimal GetIncome(bool isIncome)
         {
             decimal sum = 0;
