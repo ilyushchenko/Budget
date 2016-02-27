@@ -40,7 +40,7 @@ namespace Budget
         {
             foreach (Article art in m_articles)
             {
-                if (art.Date <= toDate && art.Date >= fromDate)
+                if (art.Date <= toDate.Date && art.Date >= fromDate.Date)
                 {
                     visiter(art);
                 }
