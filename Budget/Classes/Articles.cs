@@ -40,7 +40,7 @@ namespace Budget
         {
             foreach (Article art in m_articles)
             {
-                if (art.Date <= toDate.Date && art.Date >= fromDate.Date)
+                if (art.Date.Date <= toDate.Date && art.Date >= fromDate.Date)
                 {
                     visiter(art);
                 }
@@ -82,7 +82,7 @@ namespace Budget
             decimal sum = 0;
             foreach (Article article in m_articles)
             {
-                if (article.IsIncome == isIncome && article.Date <= toDate && article.Date >= fromDate)
+                if (article.IsIncome == isIncome && article.Date <= toDate.Date && article.Date >= fromDate.Date)
                 {
                     sum += article.PriceArt * article.AmountArt;
                 }
