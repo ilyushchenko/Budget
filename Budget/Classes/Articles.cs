@@ -36,6 +36,17 @@ namespace Budget
             }
         }
 
+        public void GetAtrToDataGW(VisitDelegate visiter, DateTime fromDate, DateTime toDate)
+        {
+            foreach (Article art in m_articles)
+            {
+                if (art.Date <= toDate && art.Date >= fromDate)
+                {
+                    visiter(art);
+                }
+            }
+        }
+
         public delegate void VisitDelegate(Article article);
 
         public void SaveArticles(string path)
