@@ -76,5 +76,18 @@ namespace Budget
             }
             return sum;
         }
+
+        public decimal GetIncome(bool isIncome, DateTime fromDate, DateTime toDate)
+        {
+            decimal sum = 0;
+            foreach (Article article in m_articles)
+            {
+                if (article.IsIncome == isIncome && article.Date <= toDate && article.Date >= fromDate)
+                {
+                    sum += article.PriceArt * article.AmountArt;
+                }
+            }
+            return sum;
+        }
     }
 }
