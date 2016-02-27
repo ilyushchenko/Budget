@@ -49,6 +49,12 @@
             this.tsmiShowHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAboutProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.gBRevise = new System.Windows.Forms.GroupBox();
+            this.rBAll = new System.Windows.Forms.RadioButton();
+            this.rbPeriod = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerForm = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.rBMonth = new System.Windows.Forms.RadioButton();
             this.raBWeek = new System.Windows.Forms.RadioButton();
             this.rBDay = new System.Windows.Forms.RadioButton();
@@ -59,7 +65,6 @@
             this.labSaldo = new System.Windows.Forms.Label();
             this.labExpense = new System.Windows.Forms.Label();
             this.labIncome = new System.Windows.Forms.Label();
-            this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,12 +84,7 @@
             this.btnAddNewCtg = new System.Windows.Forms.Button();
             this.tb_NameCtg = new System.Windows.Forms.TextBox();
             this.lbl_help = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.rBAll = new System.Windows.Forms.RadioButton();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
@@ -235,9 +235,9 @@
             // 
             this.gBRevise.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gBRevise.Controls.Add(this.rBAll);
-            this.gBRevise.Controls.Add(this.radioButton1);
-            this.gBRevise.Controls.Add(this.dateTimePicker2);
-            this.gBRevise.Controls.Add(this.dateTimePicker1);
+            this.gBRevise.Controls.Add(this.rbPeriod);
+            this.gBRevise.Controls.Add(this.dateTimePickerForm);
+            this.gBRevise.Controls.Add(this.dateTimePickerTo);
             this.gBRevise.Controls.Add(this.label2);
             this.gBRevise.Controls.Add(this.label1);
             this.gBRevise.Controls.Add(this.rBMonth);
@@ -249,6 +249,62 @@
             this.gBRevise.TabIndex = 2;
             this.gBRevise.TabStop = false;
             this.gBRevise.Text = "Просмотр";
+            // 
+            // rBAll
+            // 
+            this.rBAll.AutoSize = true;
+            this.rBAll.Location = new System.Drawing.Point(12, 80);
+            this.rBAll.Name = "rBAll";
+            this.rBAll.Size = new System.Drawing.Size(94, 17);
+            this.rBAll.TabIndex = 11;
+            this.rBAll.TabStop = true;
+            this.rBAll.Text = "За всё время";
+            this.rBAll.UseVisualStyleBackColor = true;
+            // 
+            // rbPeriod
+            // 
+            this.rbPeriod.AutoSize = true;
+            this.rbPeriod.Location = new System.Drawing.Point(12, 101);
+            this.rbPeriod.Name = "rbPeriod";
+            this.rbPeriod.Size = new System.Drawing.Size(103, 17);
+            this.rbPeriod.TabIndex = 10;
+            this.rbPeriod.TabStop = true;
+            this.rbPeriod.Text = "За промежуток";
+            this.rbPeriod.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerForm
+            // 
+            this.dateTimePickerForm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerForm.Location = new System.Drawing.Point(28, 123);
+            this.dateTimePickerForm.Name = "dateTimePickerForm";
+            this.dateTimePickerForm.Size = new System.Drawing.Size(123, 20);
+            this.dateTimePickerForm.TabIndex = 9;
+            // 
+            // dateTimePickerTo
+            // 
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerTo.Location = new System.Drawing.Point(28, 150);
+            this.dateTimePickerTo.Name = "dateTimePickerTo";
+            this.dateTimePickerTo.Size = new System.Drawing.Size(123, 20);
+            this.dateTimePickerTo.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "с";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "по";
             // 
             // rBMonth
             // 
@@ -352,13 +408,6 @@
             this.labIncome.Size = new System.Drawing.Size(39, 13);
             this.labIncome.TabIndex = 0;
             this.labIncome.Text = "Доход";
-            // 
-            // Calendar
-            // 
-            this.Calendar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Calendar.Location = new System.Drawing.Point(805, 198);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.TabIndex = 4;
             // 
             // dataGridView
             // 
@@ -538,61 +587,15 @@
             this.lbl_help.Size = new System.Drawing.Size(0, 13);
             this.lbl_help.TabIndex = 0;
             // 
-            // label1
+            // btnUpdate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "по";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "с";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 20);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(28, 123);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(123, 20);
-            this.dateTimePicker2.TabIndex = 9;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 101);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 17);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "За промежуток";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // rBAll
-            // 
-            this.rBAll.AutoSize = true;
-            this.rBAll.Location = new System.Drawing.Point(12, 80);
-            this.rBAll.Name = "rBAll";
-            this.rBAll.Size = new System.Drawing.Size(94, 17);
-            this.rBAll.TabIndex = 11;
-            this.rBAll.TabStop = true;
-            this.rBAll.Text = "За всё время";
-            this.rBAll.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(1013, 54);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.Text = "button1";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Budget
             // 
@@ -600,10 +603,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1120, 363);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.pnl_AddEditCtg);
             this.Controls.Add(this.gBCategory);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.Calendar);
             this.Controls.Add(this.gBStatistics);
             this.Controls.Add(this.gBRevise);
             this.Controls.Add(this.menuStrip1);
@@ -663,7 +666,6 @@
         private System.Windows.Forms.Label labExpense;
         private System.Windows.Forms.Label labIncome;
         private System.Windows.Forms.ToolStripMenuItem tsmiAboutProgram;
-        private System.Windows.Forms.MonthCalendar Calendar;
         private System.Windows.Forms.GroupBox gBCategory;
         private System.Windows.Forms.PictureBox picBoxDel;
         private System.Windows.Forms.PictureBox picBoxEdit;
@@ -686,12 +688,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btn_CancelAddNewCtg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerForm;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbPeriod;
         private System.Windows.Forms.RadioButton rBAll;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

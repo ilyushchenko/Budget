@@ -126,5 +126,30 @@ namespace Budget
         {
             dataGridView.Rows.Add(article.Date, article.Category, article.NameArt, article.PriceArt, article.AmountArt, article.CommentAtr);
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            dataGridView.Rows.Clear();
+            if (rBDay.Checked)
+            {
+                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value);
+            }
+            if (raBWeek.Checked)
+            {
+                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value.AddDays(7));
+            }
+            if (rBMonth.Checked)
+            {
+                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerForm.Value.AddMonths(1));
+            }
+            if (rbPeriod.Checked)
+            {
+                m_art.GetAtrToDataGW(AddArtToGrid, dateTimePickerForm.Value, dateTimePickerTo.Value);
+            }
+            if (rBAll.Checked)
+            {
+                m_art.GetAtrToDataGW(AddArtToGrid);
+            }
+        }
     }
 }
