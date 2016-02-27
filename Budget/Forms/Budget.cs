@@ -175,5 +175,21 @@ namespace Budget
                 lSaldo.Text = saldo.ToString();
             }
         }
+
+        private void btn_RemoweArt_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView.CurrentRow;
+            DateTime date = Convert.ToDateTime(row.Cells[0].Value).Date;
+            string category = row.Cells[1].Value.ToString();
+            string name = row.Cells[2].Value.ToString();
+            decimal price = Convert.ToDecimal(row.Cells[3].Value);
+            int count = Convert.ToInt32(row.Cells[4].Value);
+            string comment = row.Cells[5].Value.ToString();
+            bool isIncome = (row.Cells[6].Value.ToString() == "Доход") ? true : false;
+            Article article = new Article(date, name, price, count, comment, isIncome);
+            article.Category = category;
+            m_art.RemoveArticle(article);
+            dataGridView.Rows.RemoveAt(row.Index);
+        }
     }
 }

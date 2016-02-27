@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Budget));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCreateNewFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +86,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_RemoweArt = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
@@ -560,9 +561,9 @@
             // 
             // Column6
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column6.HeaderText = "Дата";
             this.Column6.Name = "Column6";
             this.Column6.Width = 75;
@@ -601,12 +602,23 @@
             this.Isincome.HeaderText = "Доход/Расход";
             this.Isincome.Name = "Isincome";
             // 
+            // btn_RemoweArt
+            // 
+            this.btn_RemoweArt.Location = new System.Drawing.Point(833, 223);
+            this.btn_RemoweArt.Name = "btn_RemoweArt";
+            this.btn_RemoweArt.Size = new System.Drawing.Size(151, 30);
+            this.btn_RemoweArt.TabIndex = 7;
+            this.btn_RemoweArt.Text = "Удалить статью";
+            this.btn_RemoweArt.UseVisualStyleBackColor = true;
+            this.btn_RemoweArt.Click += new System.EventHandler(this.btn_RemoweArt_Click);
+            // 
             // Budget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1120, 363);
+            this.Controls.Add(this.btn_RemoweArt);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.pnl_AddEditCtg);
             this.Controls.Add(this.gBCategory);
@@ -699,6 +711,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
+        private System.Windows.Forms.Button btn_RemoweArt;
     }
 }
 
