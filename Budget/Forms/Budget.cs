@@ -12,14 +12,15 @@ namespace Budget
 {
     public partial class Budget : Form
     {
-        public Budget(Articles articles)
+        public Budget(Articles articles, Categories categories)
         {
             InitializeComponent();
             AddToCtgList();
             m_art = articles;
+            m_categories = categories;
         }
 
-        Categories m_categories = new Categories();
+        Categories m_categories;
         Articles m_art;
 
         public void AddToCtgList()

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Budget
 {
-    class Categories
+    public class Categories
     {
         public Categories()
         {
