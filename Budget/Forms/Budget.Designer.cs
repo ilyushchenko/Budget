@@ -48,10 +48,6 @@
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiShowHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAboutProgram = new System.Windows.Forms.ToolStripMenuItem();
-            this.gBSort = new System.Windows.Forms.GroupBox();
-            this.rBSum = new System.Windows.Forms.RadioButton();
-            this.rBCategory = new System.Windows.Forms.RadioButton();
-            this.rBDate = new System.Windows.Forms.RadioButton();
             this.gBRevise = new System.Windows.Forms.GroupBox();
             this.rBMonth = new System.Windows.Forms.RadioButton();
             this.raBWeek = new System.Windows.Forms.RadioButton();
@@ -71,6 +67,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gBCategory = new System.Windows.Forms.GroupBox();
             this.lstbx_Categories = new System.Windows.Forms.ListBox();
             this.btn_AddNewArt = new System.Windows.Forms.Button();
@@ -82,9 +79,12 @@
             this.btnAddNewCtg = new System.Windows.Forms.Button();
             this.tb_NameCtg = new System.Windows.Forms.TextBox();
             this.lbl_help = new System.Windows.Forms.Label();
-            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
-            this.gBSort.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -230,61 +230,20 @@
             this.tsmiAboutProgram.Size = new System.Drawing.Size(179, 22);
             this.tsmiAboutProgram.Text = "О программе";
             // 
-            // gBSort
-            // 
-            this.gBSort.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gBSort.Controls.Add(this.rBSum);
-            this.gBSort.Controls.Add(this.rBCategory);
-            this.gBSort.Controls.Add(this.rBDate);
-            this.gBSort.Location = new System.Drawing.Point(805, 118);
-            this.gBSort.Name = "gBSort";
-            this.gBSort.Size = new System.Drawing.Size(161, 88);
-            this.gBSort.TabIndex = 1;
-            this.gBSort.TabStop = false;
-            this.gBSort.Text = "Сортировка";
-            // 
-            // rBSum
-            // 
-            this.rBSum.AutoSize = true;
-            this.rBSum.Location = new System.Drawing.Point(12, 62);
-            this.rBSum.Name = "rBSum";
-            this.rBSum.Size = new System.Drawing.Size(75, 17);
-            this.rBSum.TabIndex = 2;
-            this.rBSum.TabStop = true;
-            this.rBSum.Text = "По сумме";
-            this.rBSum.UseVisualStyleBackColor = true;
-            // 
-            // rBCategory
-            // 
-            this.rBCategory.AutoSize = true;
-            this.rBCategory.Location = new System.Drawing.Point(12, 40);
-            this.rBCategory.Name = "rBCategory";
-            this.rBCategory.Size = new System.Drawing.Size(94, 17);
-            this.rBCategory.TabIndex = 1;
-            this.rBCategory.TabStop = true;
-            this.rBCategory.Text = "По категории";
-            this.rBCategory.UseVisualStyleBackColor = true;
-            // 
-            // rBDate
-            // 
-            this.rBDate.AutoSize = true;
-            this.rBDate.Location = new System.Drawing.Point(12, 17);
-            this.rBDate.Name = "rBDate";
-            this.rBDate.Size = new System.Drawing.Size(65, 17);
-            this.rBDate.TabIndex = 0;
-            this.rBDate.TabStop = true;
-            this.rBDate.Text = "По дате";
-            this.rBDate.UseVisualStyleBackColor = true;
-            // 
             // gBRevise
             // 
             this.gBRevise.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gBRevise.Controls.Add(this.radioButton1);
+            this.gBRevise.Controls.Add(this.dateTimePicker2);
+            this.gBRevise.Controls.Add(this.dateTimePicker1);
+            this.gBRevise.Controls.Add(this.label2);
+            this.gBRevise.Controls.Add(this.label1);
             this.gBRevise.Controls.Add(this.rBMonth);
             this.gBRevise.Controls.Add(this.raBWeek);
             this.gBRevise.Controls.Add(this.rBDay);
             this.gBRevise.Location = new System.Drawing.Point(805, 27);
             this.gBRevise.Name = "gBRevise";
-            this.gBRevise.Size = new System.Drawing.Size(161, 85);
+            this.gBRevise.Size = new System.Drawing.Size(164, 177);
             this.gBRevise.TabIndex = 2;
             this.gBRevise.TabStop = false;
             this.gBRevise.Text = "Просмотр";
@@ -292,7 +251,7 @@
             // rBMonth
             // 
             this.rBMonth.AutoSize = true;
-            this.rBMonth.Location = new System.Drawing.Point(12, 63);
+            this.rBMonth.Location = new System.Drawing.Point(12, 70);
             this.rBMonth.Name = "rBMonth";
             this.rBMonth.Size = new System.Drawing.Size(73, 17);
             this.rBMonth.TabIndex = 5;
@@ -303,7 +262,7 @@
             // raBWeek
             // 
             this.raBWeek.AutoSize = true;
-            this.raBWeek.Location = new System.Drawing.Point(12, 41);
+            this.raBWeek.Location = new System.Drawing.Point(12, 45);
             this.raBWeek.Name = "raBWeek";
             this.raBWeek.Size = new System.Drawing.Size(79, 17);
             this.raBWeek.TabIndex = 4;
@@ -314,7 +273,7 @@
             // rBDay
             // 
             this.rBDay.AutoSize = true;
-            this.rBDay.Location = new System.Drawing.Point(12, 18);
+            this.rBDay.Location = new System.Drawing.Point(12, 21);
             this.rBDay.Name = "rBDay";
             this.rBDay.Size = new System.Drawing.Size(65, 17);
             this.rBDay.TabIndex = 3;
@@ -452,6 +411,11 @@
             this.Column5.HeaderText = "Комментарий";
             this.Column5.Name = "Column5";
             // 
+            // Isincome
+            // 
+            this.Isincome.HeaderText = "Доход/Расход";
+            this.Isincome.Name = "Isincome";
+            // 
             // gBCategory
             // 
             this.gBCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -572,10 +536,50 @@
             this.lbl_help.Size = new System.Drawing.Size(0, 13);
             this.lbl_help.TabIndex = 0;
             // 
-            // Isincome
+            // label1
             // 
-            this.Isincome.HeaderText = "Доход/Расход";
-            this.Isincome.Name = "Isincome";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "по";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "с";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(28, 150);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(123, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(28, 118);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(123, 20);
+            this.dateTimePicker2.TabIndex = 9;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(11, 94);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(103, 17);
+            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "За промежуток";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Budget
             // 
@@ -587,7 +591,6 @@
             this.Controls.Add(this.gBCategory);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Calendar);
-            this.Controls.Add(this.gBSort);
             this.Controls.Add(this.gBStatistics);
             this.Controls.Add(this.gBRevise);
             this.Controls.Add(this.menuStrip1);
@@ -602,8 +605,6 @@
             this.Load += new System.EventHandler(this.Budget_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.gBSort.ResumeLayout(false);
-            this.gBSort.PerformLayout();
             this.gBRevise.ResumeLayout(false);
             this.gBRevise.PerformLayout();
             this.gBStatistics.ResumeLayout(false);
@@ -640,10 +641,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
         private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiShowHelp;
-        private System.Windows.Forms.GroupBox gBSort;
-        private System.Windows.Forms.RadioButton rBSum;
-        private System.Windows.Forms.RadioButton rBCategory;
-        private System.Windows.Forms.RadioButton rBDate;
         private System.Windows.Forms.GroupBox gBRevise;
         private System.Windows.Forms.RadioButton rBMonth;
         private System.Windows.Forms.RadioButton raBWeek;
@@ -676,6 +673,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btn_CancelAddNewCtg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
