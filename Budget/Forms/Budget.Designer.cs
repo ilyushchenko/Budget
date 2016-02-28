@@ -82,6 +82,7 @@
             this.btnAddNewCtg = new System.Windows.Forms.Button();
             this.tb_NameCtg = new System.Windows.Forms.TextBox();
             this.lbl_help = new System.Windows.Forms.Label();
+            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.gBSort.SuspendLayout();
             this.gBRevise.SuspendLayout();
@@ -102,7 +103,7 @@
             this.tsmiHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1120, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -235,7 +236,7 @@
             this.gBSort.Controls.Add(this.rBSum);
             this.gBSort.Controls.Add(this.rBCategory);
             this.gBSort.Controls.Add(this.rBDate);
-            this.gBSort.Location = new System.Drawing.Point(711, 118);
+            this.gBSort.Location = new System.Drawing.Point(805, 118);
             this.gBSort.Name = "gBSort";
             this.gBSort.Size = new System.Drawing.Size(161, 88);
             this.gBSort.TabIndex = 1;
@@ -281,7 +282,7 @@
             this.gBRevise.Controls.Add(this.rBMonth);
             this.gBRevise.Controls.Add(this.raBWeek);
             this.gBRevise.Controls.Add(this.rBDay);
-            this.gBRevise.Location = new System.Drawing.Point(711, 27);
+            this.gBRevise.Location = new System.Drawing.Point(805, 27);
             this.gBRevise.Name = "gBRevise";
             this.gBRevise.Size = new System.Drawing.Size(161, 85);
             this.gBRevise.TabIndex = 2;
@@ -330,7 +331,7 @@
             this.gBStatistics.Controls.Add(this.labSaldo);
             this.gBStatistics.Controls.Add(this.labExpense);
             this.gBStatistics.Controls.Add(this.labIncome);
-            this.gBStatistics.Location = new System.Drawing.Point(10, 293);
+            this.gBStatistics.Location = new System.Drawing.Point(7, 293);
             this.gBStatistics.Name = "gBStatistics";
             this.gBStatistics.Size = new System.Drawing.Size(164, 83);
             this.gBStatistics.TabIndex = 3;
@@ -394,7 +395,7 @@
             // Calendar
             // 
             this.Calendar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Calendar.Location = new System.Drawing.Point(711, 214);
+            this.Calendar.Location = new System.Drawing.Point(805, 209);
             this.Calendar.Name = "Calendar";
             this.Calendar.TabIndex = 4;
             // 
@@ -409,10 +410,11 @@
             this.Column1,
             this.Column3,
             this.Column4,
-            this.Column5});
-            this.dataGridView.Location = new System.Drawing.Point(184, 27);
+            this.Column5,
+            this.Isincome});
+            this.dataGridView.Location = new System.Drawing.Point(181, 27);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(521, 349);
+            this.dataGridView.Size = new System.Drawing.Size(618, 349);
             this.dataGridView.TabIndex = 5;
             // 
             // Column6
@@ -458,7 +460,7 @@
             this.gBCategory.Controls.Add(this.picBoxDel);
             this.gBCategory.Controls.Add(this.picBoxEdit);
             this.gBCategory.Controls.Add(this.picBoxAdd);
-            this.gBCategory.Location = new System.Drawing.Point(6, 27);
+            this.gBCategory.Location = new System.Drawing.Point(7, 27);
             this.gBCategory.Name = "gBCategory";
             this.gBCategory.Size = new System.Drawing.Size(168, 260);
             this.gBCategory.TabIndex = 6;
@@ -528,7 +530,7 @@
             this.pnl_AddEditCtg.Controls.Add(this.btnAddNewCtg);
             this.pnl_AddEditCtg.Controls.Add(this.tb_NameCtg);
             this.pnl_AddEditCtg.Controls.Add(this.lbl_help);
-            this.pnl_AddEditCtg.Location = new System.Drawing.Point(343, 147);
+            this.pnl_AddEditCtg.Location = new System.Drawing.Point(465, 147);
             this.pnl_AddEditCtg.Name = "pnl_AddEditCtg";
             this.pnl_AddEditCtg.Size = new System.Drawing.Size(199, 117);
             this.pnl_AddEditCtg.TabIndex = 9;
@@ -570,12 +572,17 @@
             this.lbl_help.Size = new System.Drawing.Size(0, 13);
             this.lbl_help.TabIndex = 0;
             // 
+            // Isincome
+            // 
+            this.Isincome.HeaderText = "Доход/Расход";
+            this.Isincome.Name = "Isincome";
+            // 
             // Budget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(877, 385);
+            this.ClientSize = new System.Drawing.Size(1120, 385);
             this.Controls.Add(this.pnl_AddEditCtg);
             this.Controls.Add(this.gBCategory);
             this.Controls.Add(this.dataGridView);
@@ -588,8 +595,6 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(893, 424);
-            this.MinimumSize = new System.Drawing.Size(893, 424);
             this.Name = "Budget";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Программа ведения бюджета";
@@ -670,6 +675,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btn_CancelAddNewCtg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
     }
 }
 
