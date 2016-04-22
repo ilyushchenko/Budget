@@ -5,6 +5,14 @@ namespace Budget
 {
     public class Article
     {
+        private DateTime m_date;
+        private string m_Category;
+        private string m_NameArt;
+        private decimal m_PriceArt;
+        private int m_AmountArt;
+        private string m_CommentArt;
+        private bool m_Isincome;
+
         public Article(DateTime date, string name, decimal price, int amount, string comment, bool isincome)
         {
             m_date = date;
@@ -14,18 +22,8 @@ namespace Budget
             m_CommentArt = comment;
             m_Isincome = isincome;
         }
-        public Article()
-        {
 
-        }
-
-        private DateTime m_date;
-        private string m_Category;
-        private string m_NameArt;
-        private decimal m_PriceArt;
-        private int m_AmountArt;
-        private string m_CommentArt;
-        private bool m_Isincome;
+        public Article(){}
         
         public DateTime Date
         {
@@ -52,7 +50,6 @@ namespace Budget
         {
             get { return m_AmountArt; }
         }
-
         public bool IsIncome
         {
             get { return m_Isincome; }

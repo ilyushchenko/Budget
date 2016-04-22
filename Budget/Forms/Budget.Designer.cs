@@ -28,27 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Budget));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCreateNewFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiSaveFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCorrection = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCancel = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReestablish = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiCut = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPaste = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiShowHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAboutProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.gBRevise = new System.Windows.Forms.GroupBox();
             this.rBAll = new System.Windows.Forms.RadioButton();
             this.rbPeriod = new System.Windows.Forms.RadioButton();
@@ -67,6 +48,13 @@
             this.labExpense = new System.Windows.Forms.Label();
             this.labIncome = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gBCategory = new System.Windows.Forms.GroupBox();
             this.lstbx_Categories = new System.Windows.Forms.ListBox();
             this.btn_AddNewArt = new System.Windows.Forms.Button();
@@ -79,15 +67,7 @@
             this.tb_NameCtg = new System.Windows.Forms.TextBox();
             this.lbl_help = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Isincome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_RemoweArt = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
             this.gBRevise.SuspendLayout();
             this.gBStatistics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -97,141 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAdd)).BeginInit();
             this.pnl_AddEditCtg.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiFile,
-            this.tsmiCorrection,
-            this.tsmiHelp});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1120, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tsmiFile
-            // 
-            this.tsmiFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCreateNewFile,
-            this.tsmiOpenFile,
-            this.toolStripMenuItem2,
-            this.tsmiSaveFile,
-            this.toolStripMenuItem1,
-            this.tsmiExit});
-            this.tsmiFile.Name = "tsmiFile";
-            this.tsmiFile.Size = new System.Drawing.Size(48, 20);
-            this.tsmiFile.Text = "Фаил";
-            // 
-            // tsmiCreateNewFile
-            // 
-            this.tsmiCreateNewFile.Name = "tsmiCreateNewFile";
-            this.tsmiCreateNewFile.Size = new System.Drawing.Size(132, 22);
-            this.tsmiCreateNewFile.Text = "Создать";
-            // 
-            // tsmiOpenFile
-            // 
-            this.tsmiOpenFile.Name = "tsmiOpenFile";
-            this.tsmiOpenFile.Size = new System.Drawing.Size(132, 22);
-            this.tsmiOpenFile.Text = "Открыть";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(129, 6);
-            // 
-            // tsmiSaveFile
-            // 
-            this.tsmiSaveFile.Name = "tsmiSaveFile";
-            this.tsmiSaveFile.Size = new System.Drawing.Size(132, 22);
-            this.tsmiSaveFile.Text = "Сохранить";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 6);
-            // 
-            // tsmiExit
-            // 
-            this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(132, 22);
-            this.tsmiExit.Text = "Выход";
-            // 
-            // tsmiCorrection
-            // 
-            this.tsmiCorrection.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCancel,
-            this.tsmiReestablish,
-            this.toolStripMenuItem3,
-            this.tsmiCut,
-            this.tsmiCopy,
-            this.tsmiPaste,
-            this.tsmiDelete});
-            this.tsmiCorrection.Name = "tsmiCorrection";
-            this.tsmiCorrection.Size = new System.Drawing.Size(59, 20);
-            this.tsmiCorrection.Text = "Правка";
-            // 
-            // tsmiCancel
-            // 
-            this.tsmiCancel.Name = "tsmiCancel";
-            this.tsmiCancel.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCancel.Text = "Отменить";
-            // 
-            // tsmiReestablish
-            // 
-            this.tsmiReestablish.Name = "tsmiReestablish";
-            this.tsmiReestablish.Size = new System.Drawing.Size(139, 22);
-            this.tsmiReestablish.Text = "Вернуть";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(136, 6);
-            // 
-            // tsmiCut
-            // 
-            this.tsmiCut.Name = "tsmiCut";
-            this.tsmiCut.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCut.Text = "Вырезать";
-            // 
-            // tsmiCopy
-            // 
-            this.tsmiCopy.Name = "tsmiCopy";
-            this.tsmiCopy.Size = new System.Drawing.Size(139, 22);
-            this.tsmiCopy.Text = "Копировать";
-            // 
-            // tsmiPaste
-            // 
-            this.tsmiPaste.Name = "tsmiPaste";
-            this.tsmiPaste.Size = new System.Drawing.Size(139, 22);
-            this.tsmiPaste.Text = "Вставить";
-            // 
-            // tsmiDelete
-            // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(139, 22);
-            this.tsmiDelete.Text = "Удалить";
-            // 
-            // tsmiHelp
-            // 
-            this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiShowHelp,
-            this.tsmiAboutProgram});
-            this.tsmiHelp.Name = "tsmiHelp";
-            this.tsmiHelp.Size = new System.Drawing.Size(65, 20);
-            this.tsmiHelp.Text = "Справка";
-            // 
-            // tsmiShowHelp
-            // 
-            this.tsmiShowHelp.Name = "tsmiShowHelp";
-            this.tsmiShowHelp.Size = new System.Drawing.Size(179, 22);
-            this.tsmiShowHelp.Text = "Просмотр справки";
-            // 
-            // tsmiAboutProgram
-            // 
-            this.tsmiAboutProgram.Name = "tsmiAboutProgram";
-            this.tsmiAboutProgram.Size = new System.Drawing.Size(179, 22);
-            this.tsmiAboutProgram.Text = "О программе";
             // 
             // gBRevise
             // 
@@ -245,7 +90,7 @@
             this.gBRevise.Controls.Add(this.rBMonth);
             this.gBRevise.Controls.Add(this.raBWeek);
             this.gBRevise.Controls.Add(this.rBDay);
-            this.gBRevise.Location = new System.Drawing.Point(805, 16);
+            this.gBRevise.Location = new System.Drawing.Point(805, 8);
             this.gBRevise.Name = "gBRevise";
             this.gBRevise.Size = new System.Drawing.Size(164, 177);
             this.gBRevise.TabIndex = 2;
@@ -285,7 +130,7 @@
             // dateTimePickerTo
             // 
             this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(28, 150);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(28, 151);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(123, 20);
             this.dateTimePickerTo.TabIndex = 8;
@@ -350,8 +195,9 @@
             this.gBStatistics.Controls.Add(this.labSaldo);
             this.gBStatistics.Controls.Add(this.labExpense);
             this.gBStatistics.Controls.Add(this.labIncome);
-            this.gBStatistics.Location = new System.Drawing.Point(7, 277);
+            this.gBStatistics.Location = new System.Drawing.Point(805, 260);
             this.gBStatistics.Name = "gBStatistics";
+            this.gBStatistics.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gBStatistics.Size = new System.Drawing.Size(164, 83);
             this.gBStatistics.TabIndex = 3;
             this.gBStatistics.TabStop = false;
@@ -424,39 +270,86 @@
             this.Column4,
             this.Column5,
             this.Isincome});
-            this.dataGridView.Location = new System.Drawing.Point(181, 16);
+            this.dataGridView.Location = new System.Drawing.Point(181, 8);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(618, 344);
+            this.dataGridView.Size = new System.Drawing.Size(613, 335);
             this.dataGridView.TabIndex = 5;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column6.HeaderText = "Дата";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Категория";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 75;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Название";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Стоимость";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Количество";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 75;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Комментарий";
+            this.Column5.Name = "Column5";
+            // 
+            // Isincome
+            // 
+            this.Isincome.HeaderText = "Доход/Расход";
+            this.Isincome.Name = "Isincome";
+            this.Isincome.Width = 82;
             // 
             // gBCategory
             // 
             this.gBCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gBCategory.Controls.Add(this.btn_RemoweArt);
             this.gBCategory.Controls.Add(this.lstbx_Categories);
             this.gBCategory.Controls.Add(this.btn_AddNewArt);
             this.gBCategory.Controls.Add(this.picBoxDel);
             this.gBCategory.Controls.Add(this.picBoxEdit);
             this.gBCategory.Controls.Add(this.picBoxAdd);
-            this.gBCategory.Location = new System.Drawing.Point(7, 16);
+            this.gBCategory.Location = new System.Drawing.Point(7, 8);
             this.gBCategory.Name = "gBCategory";
-            this.gBCategory.Size = new System.Drawing.Size(168, 260);
+            this.gBCategory.Size = new System.Drawing.Size(168, 335);
             this.gBCategory.TabIndex = 6;
             this.gBCategory.TabStop = false;
             this.gBCategory.Text = "Категории";
             // 
             // lstbx_Categories
             // 
+            this.lstbx_Categories.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lstbx_Categories.FormattingEnabled = true;
             this.lstbx_Categories.Location = new System.Drawing.Point(7, 19);
             this.lstbx_Categories.Name = "lstbx_Categories";
-            this.lstbx_Categories.Size = new System.Drawing.Size(122, 199);
+            this.lstbx_Categories.Size = new System.Drawing.Size(122, 225);
             this.lstbx_Categories.TabIndex = 6;
             this.lstbx_Categories.SelectedIndexChanged += new System.EventHandler(this.lstbx_Categories_SelectedIndexChanged);
             // 
             // btn_AddNewArt
             // 
+            this.btn_AddNewArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_AddNewArt.Enabled = false;
-            this.btn_AddNewArt.Location = new System.Drawing.Point(7, 224);
+            this.btn_AddNewArt.Location = new System.Drawing.Point(7, 257);
             this.btn_AddNewArt.Name = "btn_AddNewArt";
             this.btn_AddNewArt.Size = new System.Drawing.Size(151, 30);
             this.btn_AddNewArt.TabIndex = 5;
@@ -466,6 +359,7 @@
             // 
             // picBoxDel
             // 
+            this.picBoxDel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxDel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxDel.Enabled = false;
             this.picBoxDel.Image = ((System.Drawing.Image)(resources.GetObject("picBoxDel.Image")));
@@ -478,6 +372,7 @@
             // 
             // picBoxEdit
             // 
+            this.picBoxEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxEdit.Enabled = false;
             this.picBoxEdit.Image = ((System.Drawing.Image)(resources.GetObject("picBoxEdit.Image")));
@@ -490,6 +385,7 @@
             // 
             // picBoxAdd
             // 
+            this.picBoxAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBoxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxAdd.Enabled = false;
             this.picBoxAdd.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAdd.Image")));
@@ -507,7 +403,7 @@
             this.pnl_AddEditCtg.Controls.Add(this.btnAddNewCtg);
             this.pnl_AddEditCtg.Controls.Add(this.tb_NameCtg);
             this.pnl_AddEditCtg.Controls.Add(this.lbl_help);
-            this.pnl_AddEditCtg.Location = new System.Drawing.Point(465, 136);
+            this.pnl_AddEditCtg.Location = new System.Drawing.Point(419, 135);
             this.pnl_AddEditCtg.Name = "pnl_AddEditCtg";
             this.pnl_AddEditCtg.Size = new System.Drawing.Size(199, 117);
             this.pnl_AddEditCtg.TabIndex = 9;
@@ -551,60 +447,19 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(1013, 54);
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.Location = new System.Drawing.Point(805, 191);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(164, 61);
             this.btnUpdate.TabIndex = 10;
-            this.btnUpdate.Text = "button1";
+            this.btnUpdate.Text = "Просмотреть";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // Column6
-            // 
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column6.HeaderText = "Дата";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Категория";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 75;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Название";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Стоимость";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 75;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Количество";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 75;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Комментарий";
-            this.Column5.Name = "Column5";
-            // 
-            // Isincome
-            // 
-            this.Isincome.HeaderText = "Доход/Расход";
-            this.Isincome.Name = "Isincome";
-            // 
             // btn_RemoweArt
             // 
-            this.btn_RemoweArt.Location = new System.Drawing.Point(833, 223);
+            this.btn_RemoweArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_RemoweArt.Location = new System.Drawing.Point(7, 293);
             this.btn_RemoweArt.Name = "btn_RemoweArt";
             this.btn_RemoweArt.Size = new System.Drawing.Size(151, 30);
             this.btn_RemoweArt.TabIndex = 7;
@@ -617,26 +472,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1120, 363);
-            this.Controls.Add(this.btn_RemoweArt);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1120, 346);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.pnl_AddEditCtg);
             this.Controls.Add(this.gBCategory);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.gBStatistics);
             this.Controls.Add(this.gBRevise);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Budget";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Программа ведения бюджета";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Budget_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.gBRevise.ResumeLayout(false);
             this.gBRevise.PerformLayout();
             this.gBStatistics.ResumeLayout(false);
@@ -649,30 +501,11 @@
             this.pnl_AddEditCtg.ResumeLayout(false);
             this.pnl_AddEditCtg.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tsmiFile;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCreateNewFile;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOpenFile;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem tsmiSaveFile;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem tsmiExit;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCorrection;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCancel;
-        private System.Windows.Forms.ToolStripMenuItem tsmiReestablish;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCut;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopy;
-        private System.Windows.Forms.ToolStripMenuItem tsmiPaste;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
-        private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
-        private System.Windows.Forms.ToolStripMenuItem tsmiShowHelp;
         private System.Windows.Forms.GroupBox gBRevise;
         private System.Windows.Forms.RadioButton rBMonth;
         private System.Windows.Forms.RadioButton raBWeek;
@@ -681,7 +514,6 @@
         private System.Windows.Forms.Label labSaldo;
         private System.Windows.Forms.Label labExpense;
         private System.Windows.Forms.Label labIncome;
-        private System.Windows.Forms.ToolStripMenuItem tsmiAboutProgram;
         private System.Windows.Forms.GroupBox gBCategory;
         private System.Windows.Forms.PictureBox picBoxDel;
         private System.Windows.Forms.PictureBox picBoxEdit;
@@ -704,6 +536,7 @@
         private System.Windows.Forms.RadioButton rbPeriod;
         private System.Windows.Forms.RadioButton rBAll;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btn_RemoweArt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -711,7 +544,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Isincome;
-        private System.Windows.Forms.Button btn_RemoweArt;
     }
 }
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Budget
@@ -30,14 +23,6 @@ namespace Budget
                 lstbx_Categories.Items.Add(Category); 
             }
         }
-
-        /*public void AddToArtList()
-        {
-            foreach (var article in m_art.GetAtrToDataGW())
-            {
-                dataGridView.Rows.Add(article);
-            }
-        }*/
 
         private void lstbx_Categories_SelectedIndexChanged(object sender, EventArgs e)
         {
